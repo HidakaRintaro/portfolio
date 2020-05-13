@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+:root {
+  --font-color: #ffffff;
+}
+
+html, body, div, span,
+h1, h2, h3, h4, p, pre, em, img,
+small, strong,
+dl, dt, dd, ol, ul, li,
+form, label,
+table, tbody, tfoot, thead, tr, th, td,
+article, aside,
+footer, header, menu, nav, section {
+  color: var(--font-color);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "M PLUS Rounded 1c";
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--font-color);
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--font-color);
+  margin: 0;
+  padding: 0;
+}
+
+.none {
+  display: none;
+}
