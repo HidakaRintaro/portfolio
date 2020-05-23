@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+/*
+  0.root
+
+  1.全体に対するCSS
+    1.0 body
+    1.1 h2
+    1.2 アンカータグ
+    1.3 class名がbtnのアンカータグ
+    1.4 hr
+  
+  2.header
+    2.0 #h_logo
+    2.1 nav
+
+  3.main
+    3.0 #chronology
+
+  4.footer
+  
+*/
+
+:root {
+  --main-bg: #545454;
+  --sub-bg: #5A5A5A;
+  --shadow-dark: #3b3b3b;
+  --shadow-bright: #6d6d6d;
+  --font-color: #ffffff;
+  --text-shadow: #484848;
+  --color-white: #ffffff;
+  --ruler: 16px;
+  --radius-size: 20px;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--font-color);
+}
+
+h2 {
+  font-size: calc(var(--ruler) * 2);
+  margin-bottom: 8px;
+  padding-left: 5px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+a[class*="btn"] {
+  line-height: 45px;
+  padding: 0 15px;
+  border-radius: var(--radius-size);
+  box-shadow: 5px 5px 15px var(--shadow-dark), -5px -5px 15px var(--shadow-bright);
+}
+
+a[class="btn"]:hover {
+  box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-bright);
+}
+
+a[class="btn"]:active {
+  box-shadow: inset 1px 1px 2px var(--shadow-dark), inset -1px -1px 2px var(--shadow-bright);
+}
+
+a[class$="now"] {
+  box-shadow: inset 1px 1px 2px var(--shadow-dark), inset -1px -1px 2px var(--shadow-bright);
+}
+
+hr {
+  background-color: #ffffff;
+  height: 2px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px var(--text-shadow);
+}
+
+header {
+  background-color: var(--main-bg);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: calc(var(--ruler) * 5);
+  padding: 0 calc(var(--ruler) * 2);
+  border-radius: 0 0 var(--radius-size) var(--radius-size);
+  box-shadow: 5px 5px 15px var(--shadow-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+header p a {
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+}
+
+header p img {
+  width: 50px;
+  height: 50px;
+}
+
+header p span {
+  display: block;
+  font-size: calc(var(--ruler) * 1.5);
+  margin-left: var(--ruler);
+}
+
+header nav ul {
+  display: flex;
+  font-size: calc(var(--ruler) * 1.5);
+}
+
+header li:not(:last-child) {
+  margin-right: 20px;
+}
+
+main {
+  margin-top: calc(var(--ruler) * 1.5 + 80px);
+  margin-bottom: calc(var(--ruler) * 5);
+}
+
+main h1 {
+  font-size: calc(var(--ruler) * 2);
+  text-align: center;
+  margin-bottom: calc(var(--ruler) * 2);
+}
+
+#chronology {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+}
+
+table {
+  margin: 0 auto calc(var(--ruler) * 2);
+  border-collapse: separate;
+  border-spacing: 0 calc(var(--ruler) / 2);
+}
+
+tr:first-child {
+  border-radius: var(--radius-size) var(--radius-size) 0 0;
+  box-shadow: 5px 5px 15px var(--shadow-dark), -5px -5px 15px var(--shadow-bright);
+}
+
+th {
+  padding: var(--ruler) calc(var(--ruler) / 2);
+}
+
+td {
+  padding: calc(var(--ruler) / 2);
+  vertical-align: middle;
+}
+
+td:not(:last-child) {
+  border-right: 1px solid var(--color-white);
+}
+
+.no {
+  width: 2rem;
+  text-align: center;
+}
+
+.period {
+  width: 6.5rem;
+  text-align: center;
+}
+
+.genre {
+  width: 5.5rem;
+  text-align: center;
+}
+
+.titel {
+  width: auto;
+}
+
+.impression {
+  width: auto;
+}
+
+.progress {
+  width: 5.5rem;
+  text-align: center;
+}
+
+footer {
+  margin-bottom: calc(var(--ruler) * 1.5);
+  text-align: center;
+}
+
+footer p {
+  font-size: var(--ruler);
+}
