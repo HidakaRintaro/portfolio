@@ -15,10 +15,7 @@
     2.1 nav
 
   3.main
-    3.0 #name
-    3.1 #about
-    3.2 #skills
-    3.3 #accounts
+    3.0 #products
     
   4.footer
   
@@ -33,7 +30,6 @@
   --text-shadow: #484848;
   --color-white: #ffffff;
   --ruler: 16px;
-  --content-width: 640px;
   --radius-size: 20px;
 }
 
@@ -53,7 +49,7 @@ a {
   text-decoration: none;
 }
 
-a[class="btn"] {
+a[class*="btn"] {
   line-height: 45px;
   padding: 0 15px;
   border-radius: var(--radius-size);
@@ -65,6 +61,10 @@ a[class="btn"]:hover {
 }
 
 a[class="btn"]:active {
+  box-shadow: inset 1px 1px 2px var(--shadow-dark), inset -1px -1px 2px var(--shadow-bright);
+}
+
+a[class$="now"] {
   box-shadow: inset 1px 1px 2px var(--shadow-dark), inset -1px -1px 2px var(--shadow-bright);
 }
 
